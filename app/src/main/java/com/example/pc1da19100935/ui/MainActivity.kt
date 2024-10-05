@@ -1,7 +1,8 @@
-package com.example.pc1da19100935
+package com.example.pc1da19100935.ui
 
 import android.os.Bundle
 import android.view.Menu
+import android.widget.ListView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -11,6 +12,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.example.pc1da19100935.R
 import com.example.pc1da19100935.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,11 +20,17 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
+    var arrSO = arrayOf(
+        "Manchester United", "Barcelona FC", "Liverpool", "Real Madrid", "Juventus", "Pumas UNAM", "Universitario de Deportes", "Flamengo", "River Plate", "Boca Juniors"
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.fragment_equipo)
+
+        val lsvEquipos: ListView = findViewById(R.id.lsvSO)
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
@@ -38,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_listado, R.id.nav_rendimiento, R.id.nav_equipo
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

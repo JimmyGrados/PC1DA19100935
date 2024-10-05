@@ -2,24 +2,20 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
+    android:id="@+id/mobile_navigation">
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.pc1da19100935.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/navlistado"
+        android:name="com.example.pc1da19100935.ui.fragments.ListadoFragment"
+        android:label="fragment_listado"
+        tools:layout="@layout/fragment_listado" />
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.pc1da19100935.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/navrendimiento"
+        android:name="com.example.pc1da19100935.ui.fragments.RendimientoFragment"
+        android:label="fragment_rendimiento"
+        tools:layout="@layout/fragment_rendimiento" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.pc1da19100935.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/navequipo"
+        android:name="com.example.pc1da19100935.ui.fragments.EquipoFragment"
+        android:label="fragment_equipo"
+        tools:layout="@layout/fragment_equipo" />
 </navigation>
